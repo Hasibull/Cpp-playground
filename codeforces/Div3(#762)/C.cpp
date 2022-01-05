@@ -57,6 +57,10 @@ int main()
         }
         */
 
+       /*
+       both way works!
+       */
+
         string ans="";
 
         while(s){
