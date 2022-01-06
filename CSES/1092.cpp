@@ -10,36 +10,38 @@ int main()
 
     long long sum = (n*(n+1))/2;
 
-    cout<<sum<<endl;
-
     if(sum%2==1){
         cout<<"NO"<<endl;
     }
     else{
         cout<<"YES"<<endl;
         long long dum = sum/2, m = n;
-        map<long long, long>hst;
-        vector<long long>first;
-        vector<long>second;
+        map<long long, int>used;
+        vector<long long>first,second;
+        
+        while(1){
+            if(dum-m>=0)
+                dum-=m;
+            else{
+                break;
+            }
 
-        while(dum>=m){
-            dum -= m;
-
-            if(dum<m && dum!=0){
-                hst[m]=1;
-                hst[dum]=1;
+            if(dum<m && dum>0){
+                used[m]=1;
+                used[dum]=1;
                 first.push_back(m);
                 first.push_back(dum);
+                break;
             }
             else{
                 first.push_back(m);
-                hst[m]=1;
+                used[m]=1;
             }
             m--;
         }
 
         for(int i=1; i<=n; i++){
-            if(hst[i]!=1){
+            if(used[i]!=1){
                 second.push_back(i);
             }
         }
@@ -54,6 +56,7 @@ int main()
             cout<<second[i]<<" ";
         }
         cout<<endl;
+        
     }
 
     return 0;
