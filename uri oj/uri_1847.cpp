@@ -29,7 +29,7 @@ int main()
     else if(a==b && c>b){
         cout<<":)"<<endl;
     }
-    else if(a==b && b>c){
+    else{
         cout<<":("<<endl;
     }
 
