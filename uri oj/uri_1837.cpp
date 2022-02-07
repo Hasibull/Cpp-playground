@@ -30,6 +30,5 @@ int main()
             cout<<(a/b)+1<<" "<<a-((1+(a/b))*b)<<endl;
         }
     }
-
-    return 0;
+    
 }
