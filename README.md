@@ -6,3 +6,4 @@
 - Uva online judge
 - LightOj
 - Uri online judge
+- Spoj
